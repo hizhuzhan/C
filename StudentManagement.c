@@ -1,7 +1,8 @@
 ﻿#include <stdio.h>
 #include <string>
 
-/*定义学生结构体*/  
+/*定义学生结构体*/ 
+/*Define student struct*/ 
 
 struct Student  
 
