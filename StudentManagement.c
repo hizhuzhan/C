@@ -1,7 +1,7 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <string>
 
-/*¶¨ÒåÑ§Éú½á¹¹Ìå*/  
+/*å®šä¹‰å­¦ç”Ÿç»“æ„ä½“*/  
 
 struct Student  
 
@@ -36,7 +36,7 @@ float Avg(struct Student stu)
 
 
 
-/*Í¨¹ıÑ§ºÅ·µ»ØÊı×éÏÂ±ê*/  
+/*é€šè¿‡å­¦å·è¿”å›æ•°ç»„ä¸‹æ ‡*/  
 
 int Student_SearchByIndex(char id[])  
 
@@ -64,7 +64,7 @@ int Student_SearchByIndex(char id[])
 
 
 
-/*Í¨¹ıĞÕÃû·µ»ØÊı×éÏÂ±ê*/  
+/*é€šè¿‡å§“åè¿”å›æ•°ç»„ä¸‹æ ‡*/  
 
 int Student_SearchByName(char name[])  
 
@@ -92,13 +92,13 @@ int Student_SearchByName(char name[])
 
 
 
-/*ÏÔÊ¾µ¥ÌõÑ§Éú¼ÇÂ¼*/  
+/*æ˜¾ç¤ºå•æ¡å­¦ç”Ÿè®°å½•*/  
 
 void Student_DisplaySingle(int index)  
 
 {  
 	
-	printf("%10s%10s%8s%8s%8s%10s\n","Ñ§ºÅ","ĞÕÃû","Ó¢Óï³É¼¨","ÊıÑ§³É¼¨","¼ÆËã»ú³É¼¨","Æ½¾ù³É¼¨");  
+	printf("%10s%10s%8s%8s%8s%10s\n","å­¦å·","å§“å","è‹±è¯­æˆç»©","æ•°å­¦æˆç»©","è®¡ç®—æœºæˆç»©","å¹³å‡æˆç»©");  
 	
 	printf("=============================================================\n");  
 	
@@ -110,7 +110,7 @@ void Student_DisplaySingle(int index)
 
 
 
-/*²åÈëÑ§ÉúĞÅÏ¢*/  
+/*æ’å…¥å­¦ç”Ÿä¿¡æ¯*/  
 
 void Student_Insert()  
 
@@ -120,7 +120,7 @@ void Student_Insert()
 		
 	{  
 		
-		printf("ÇëÊäÈëÑ§ºÅ:");  
+		printf("è¯·è¾“å…¥å­¦å·:");  
 		
 		scanf("%s",&students[num].ID);  
 		
@@ -128,7 +128,7 @@ void Student_Insert()
 		
 		
 		
-		printf("ÇëÊäÈëĞÕÃû:");  
+		printf("è¯·è¾“å…¥å§“å:");  
 		
 		scanf("%s",&students[num].Name);  
 		
@@ -136,7 +136,7 @@ void Student_Insert()
 		
 		
 		
-		printf("ÇëÊäÈëÓ¢Óï³É¼¨:");  
+		printf("è¯·è¾“å…¥è‹±è¯­æˆç»©:");  
 		
 		scanf("%f",&students[num].Mark1);  
 		
@@ -144,7 +144,7 @@ void Student_Insert()
 		
 		
 		
-		printf("ÇëÊäÈëÊıÑ§³É¼¨:");  
+		printf("è¯·è¾“å…¥æ•°å­¦æˆç»©:");  
 		
 		scanf("%f",&students[num].Mark2);  
 		
@@ -152,7 +152,7 @@ void Student_Insert()
 		
 		
 		
-		printf("ÇëÊäÈë¼ÆËã»ú³É¼¨:");  
+		printf("è¯·è¾“å…¥è®¡ç®—æœºæˆç»©:");  
 		
 		scanf("%f",&students[num].Mark3);  
 		
@@ -166,7 +166,7 @@ void Student_Insert()
 		
 		
 		
-		printf("ÊÇ·ñ¼ÌĞø?(y/n)");  
+		printf("æ˜¯å¦ç»§ç»­?(y/n)");  
 		
 		if (getchar()=='n')  
 			
@@ -184,7 +184,7 @@ void Student_Insert()
 
 
 
-/*ĞŞ¸ÄÑ§ÉúĞÅÏ¢*/  
+/*ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯*/  
 
 void Student_Modify()  
 
@@ -200,7 +200,7 @@ void Student_Modify()
 		
 		int index;  
 		
-		printf("ÇëÊäÈëÒªĞŞ¸ÄµÄÑ§ÉúµÄÑ§ºÅ:");  
+		printf("è¯·è¾“å…¥è¦ä¿®æ”¹çš„å­¦ç”Ÿçš„å­¦å·:");  
 		
 		scanf("%s",&id);  
 		
@@ -212,7 +212,7 @@ void Student_Modify()
 			
 		{  
 			
-			printf("Ñ§Éú²»´æÔÚ!\n");  
+			printf("å­¦ç”Ÿä¸å­˜åœ¨!\n");  
 			
 		}  
 		
@@ -220,42 +220,42 @@ void Student_Modify()
 			
 		{  
 			
-			printf("ÄãÒªĞŞ¸ÄµÄÑ§ÉúĞÅÏ¢Îª:\n");  
+			printf("ä½ è¦ä¿®æ”¹çš„å­¦ç”Ÿä¿¡æ¯ä¸º:\n");  
 			
 			Student_DisplaySingle(index);  
 			
-			printf("-- ÇëÊäÈëĞÂÖµ--\n");  
+			printf("-- è¯·è¾“å…¥æ–°å€¼--\n");  
 			
 			
-			printf("ÇëÊäÈëÑ§ºÅ:");  
+			printf("è¯·è¾“å…¥å­¦å·:");  
 			
 			scanf("%s",&students[index].ID);  
 			
 			getchar();  
 			
 			
-			printf("ÇëÊäÈëĞÕÃû:");  
+			printf("è¯·è¾“å…¥å§“å:");  
 			
 			scanf("%s",&students[index].Name);  
 			
 			getchar();  
 			
 			
-			printf("ÇëÊäÈëÓ¢Óï³É¼¨:");  
+			printf("è¯·è¾“å…¥è‹±è¯­æˆç»©:");  
 			
 			scanf("%f",&students[index].Mark1);  
 			
 			getchar();  
 			
 			
-			printf("ÇëÊäÈëÊıÑ§³É¼¨:");  
+			printf("è¯·è¾“å…¥æ•°å­¦æˆç»©:");  
 			
 			scanf("%f",&students[index].Mark2);  
 			
 			getchar();  
 			
 			
-			printf("ÇëÊäÈë¼ÆËã»ú³É¼¨:");  
+			printf("è¯·è¾“å…¥è®¡ç®—æœºæˆç»©:");  
 			
 			scanf("%f",&students[index].Mark3);  
 			
@@ -266,7 +266,7 @@ void Student_Modify()
 			
 		}  
 		
-		printf("ÊÇ·ñ¼ÌĞø?(y/n)");  
+		printf("æ˜¯å¦ç»§ç»­?(y/n)");  
 		
 		if (getchar()=='n')  
 			
@@ -282,7 +282,7 @@ void Student_Modify()
 
 
 
-/*É¾³ıÑ§ÉúĞÅÏ¢*/  
+/*åˆ é™¤å­¦ç”Ÿä¿¡æ¯*/  
 
 void Student_Delete()  
 
@@ -298,7 +298,7 @@ void Student_Delete()
 		
 		int index;  
 		
-		printf("ÇëÊäÈëÒªÉ¾³ıµÄÑ§ÉúµÄÑ§ºÅ:");  
+		printf("è¯·è¾“å…¥è¦åˆ é™¤çš„å­¦ç”Ÿçš„å­¦å·:");  
 		
 		scanf("%s",&id);  
 		
@@ -310,7 +310,7 @@ void Student_Delete()
 			
 		{  
 			
-			printf("Ñ§Éú²»´æÔÚ!\n");  
+			printf("å­¦ç”Ÿä¸å­˜åœ¨!\n");  
 			
 		}  
 		
@@ -318,11 +318,11 @@ void Student_Delete()
 			
 		{  
 			
-			printf("ÄãÒªÉ¾³ıµÄÑ§ÉúĞÅÏ¢Îª:\n");  
+			printf("ä½ è¦åˆ é™¤çš„å­¦ç”Ÿä¿¡æ¯ä¸º:\n");  
 			
 			Student_DisplaySingle(index);  
 			
-			printf("ÊÇ·ñÕæµÄÒªÉ¾³ı?(y/n)");  
+			printf("æ˜¯å¦çœŸçš„è¦åˆ é™¤?(y/n)");  
 			
 			if (getchar()=='y')  
 				
@@ -344,7 +344,7 @@ void Student_Delete()
 			
 		}  
 		
-		printf("ÊÇ·ñ¼ÌĞø?(y/n)");  
+		printf("æ˜¯å¦ç»§ç»­?(y/n)");  
 		
 		if (getchar()=='n')  
 			
@@ -360,7 +360,7 @@ void Student_Delete()
 
 
 
-/*°´ĞÕÃû²éÑ¯*/  
+/*æŒ‰å§“åæŸ¥è¯¢*/  
 
 void Student_Select()  
 
@@ -374,7 +374,7 @@ void Student_Select()
 		
 		int index;  
 		
-		printf("ÇëÊäÈëÒª²éÑ¯µÄÑ§ÉúµÄÑ§ºÅ:");  
+		printf("è¯·è¾“å…¥è¦æŸ¥è¯¢çš„å­¦ç”Ÿçš„å­¦å·:");  
 		
 		scanf("%s",&id);  
 		
@@ -386,7 +386,7 @@ void Student_Select()
 			
 		{  
 			
-			printf("Ñ§Éú²»´æÔÚ!\n");  
+			printf("å­¦ç”Ÿä¸å­˜åœ¨!\n");  
 			
 		}  
 		
@@ -394,13 +394,13 @@ void Student_Select()
 			
 		{  
 			
-			printf("ÄãÒª²éÑ¯µÄÑ§ÉúĞÅÏ¢Îª:\n");  
+			printf("ä½ è¦æŸ¥è¯¢çš„å­¦ç”Ÿä¿¡æ¯ä¸º:\n");  
 			
 			Student_DisplaySingle(index);  
 			
 		}  
 		
-		printf("ÊÇ·ñ¼ÌĞø?(y/n)");  
+		printf("æ˜¯å¦ç»§ç»­?(y/n)");  
 		
 		if (getchar()=='n')  
 			
@@ -414,7 +414,7 @@ void Student_Select()
 	
 }  
 
-/*°´Æ½¾ù·ÖÍ³¼Æ*/
+/*æŒ‰å¹³å‡åˆ†ç»Ÿè®¡*/
 
 void Student_Count()
 
@@ -470,15 +470,15 @@ void Student_Count()
 	}
 
 
- printf("\n				°´Æ½¾ù·ÖÍ³¼Æ¸÷·ÖÊı¶ÎÑ§ÉúÈËÊı\n");
+ printf("\n				æŒ‰å¹³å‡åˆ†ç»Ÿè®¡å„åˆ†æ•°æ®µå­¦ç”Ÿäººæ•°\n");
 
  printf("\n============================================================\n");
- printf("	·ÖÊı¶Î		0--59	60--69	70--79	80--89	90--100\n");
- printf("	ÈËÊı		%d	%d	%d	%d	%d\n", a,b,c,d,e);
+ printf("	åˆ†æ•°æ®µ		0--59	60--69	70--79	80--89	90--100\n");
+ printf("	äººæ•°		%d	%d	%d	%d	%d\n", a,b,c,d,e);
 	
 }
 
-/*°´Æ½¾ùÖµÅÅĞò*/  
+/*æŒ‰å¹³å‡å€¼æ’åº*/  
 
 void Student_SortByAverage()  
 
@@ -516,7 +516,7 @@ void Student_SortByAverage()
 
 
 
-/*ÏÔÊ¾Ñ§ÉúĞÅÏ¢*/  
+/*æ˜¾ç¤ºå­¦ç”Ÿä¿¡æ¯*/  
 
 void Student_Display()  
 
@@ -524,7 +524,7 @@ void Student_Display()
 	
 	int i;  
 	
-	printf("%10s%10s%8s%8s%8s%10s\n","Ñ§ºÅ","ĞÕÃû","Ó¢Óï","ÊıÑ§","¼ÆËã»ú","Æ½¾ù³É¼¨");  
+	printf("%10s%10s%8s%8s%8s%10s\n","å­¦å·","å§“å","è‹±è¯­","æ•°å­¦","è®¡ç®—æœº","å¹³å‡æˆç»©");  
 	
 	printf("=============================================================\n");  
 	
@@ -545,7 +545,7 @@ void Student_Display()
 
 
 
-/*Ö÷³ÌĞò*/  
+/*ä¸»ç¨‹åº*/  
 
 void main()  
 
@@ -557,19 +557,19 @@ void main()
 		
 	{  
 		
-		/*Ö÷²Ëµ¥*/  
-		printf("\n			    Ö÷²Ëµ¥\n");  
+		/*ä¸»èœå•*/  
+		printf("\n			    ä¸»èœå•\n");  
 		
 		printf("\n============================================================\n");  
 		
-		printf("	1. Êı¾İÊäÈë		2. Êı¾İÊä³ö\n");  
+		printf("	1. æ•°æ®è¾“å…¥		2. æ•°æ®è¾“å‡º\n");  
 		
 		
-		printf("	3. Êı¾İÅÅĞò£¨°´Æ½¾ù·Ö£©	4. Êı¾İ²éÕÒ£¨°´Ñ§ºÅ£©\n");
+		printf("	3. æ•°æ®æ’åºï¼ˆæŒ‰å¹³å‡åˆ†ï¼‰	4. æ•°æ®æŸ¥æ‰¾ï¼ˆæŒ‰å­¦å·ï¼‰\n");
 		
-		printf("	5. Êı¾İ²åÈë		6. Êı¾İÉ¾³ı\n");  
+		printf("	5. æ•°æ®æ’å…¥		6. æ•°æ®åˆ é™¤\n");  
 		
-		printf("	7. Êı¾İÍ³¼Æ£¨°´Æ½¾ù·Ö£©	0. ÍË³ö\n");  
+		printf("	7. æ•°æ®ç»Ÿè®¡ï¼ˆæŒ‰å¹³å‡åˆ†ï¼‰	0. é€€å‡º\n");  
 		
 		printf("============================================================\n");  
 		
